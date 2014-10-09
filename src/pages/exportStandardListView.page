@@ -1,0 +1,18 @@
+<apex:page controller="listviewAPI" readOnly="true" action="{!fetchListviewRecords}" contentType="application/x-excel#ListExport.xls">
+<table border="1">
+    <tr>
+        <apex:repeat value="{!columnName}" var="colName">
+            <td>{!colName} </td>
+        </apex:repeat>  
+    </tr>
+    <apex:repeat value="{!allRecords}" var="records">
+    <apex:repeat value="{!records}" var="rec"> 
+    <tr>
+        <apex:repeat value="{!fields}" var="fieldName">
+            <td>{!rec[fieldName]}</td>
+        </apex:repeat>
+    </tr>
+    </apex:repeat>
+    </apex:repeat>
+</table>
+</apex:page>

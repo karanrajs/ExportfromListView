@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <webLinks>
+        <fullName>Export_To_Excel</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Export To Excel</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>var listId = document.getElementsByName(&quot;fcf&quot;)[0].value;
+var ObjectName = &apos;Account&apos;;
+window.open(&quot;apex/exportStandardListView?Object=&quot;+ObjectName+&quot;&amp;listid=&quot;+listId,&quot;myWindow&quot;);</url>
+    </webLinks>
+</CustomObject>
