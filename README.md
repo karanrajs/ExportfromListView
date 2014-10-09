@@ -6,4 +6,4 @@ ExportfromListView
        src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/src/main/webapp/resources/img/deploy.png">
 </a>
 
-Export records directly from List view using winter'15 ListView API. Find more details about this in my blog 
+This allows you to Export records directly from List view of any objects. Find more details about this in my blog. Click <a href="http://clicksandcode.blogspot.in/2014/10/export-records-from-list-viewlistview.html">here</a> 
