@@ -10,7 +10,7 @@ This allows you to Export records directly from List view of any objects.<br/>
 Find more details about in my blog click <a href="http://clicksandcode.blogspot.in/2014/10/export-records-from-list-viewlistview.html">here</a> 
 
 <h3>Screenshot</h3>
-![img](https://lh6.googleusercontent.com/weMR30d680nPb6WNWPZzNjX8PcfiRBvuSxu54iGqKMeG78lRwLypy5BNg4HJTxBn5yoHplRJhqY=w1342-h547)
+![img](/images/ExportToExcel.png)
 
 
 
