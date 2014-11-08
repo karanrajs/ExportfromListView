@@ -24,9 +24,14 @@ To add the Export to excel button follow the below setps, below example for 'Acc
   </ol>
 
 ```
-var listId = document.getElementsByName("fcf")[0].value;
-var ObjectName = 'Account'; //API name of the object on which you are creating this button
-window.open("apex/exportStandardListView?Object="+ObjectName+"&listid="+listId,"myWindow");
+/Getting List Name 
+var listview = document.getElementsByName('fcf')[0]; 
+var listName = listview.options[listview.selectedIndex].text; 
+//Getting List Id 
+var listId = document.getElementsByName("fcf")[0].value; 
+var ObjectName = 'Account'; 
+//Passing ListId,ObjectName and ListName to Visualforce page 
+window.open("apex/exportStandardListView?Object="+ObjectName+"&listid="+listId+"&listName="+listName,"myWindow");
 ```
 
 <h3>Remote Site settings</h3>
