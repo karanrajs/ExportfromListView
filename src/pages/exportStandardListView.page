@@ -1,4 +1,4 @@
-<apex:page controller="listviewAPI" readOnly="true" action="{!fetchListviewRecords}" contentType="application/x-excel#ListExport.xls">
+<apex:page controller="listviewAPI" readOnly="true" action="{!fetchListviewRecords}" contentType="application/x-excel#{!fileName}.xls">
 <table border="1">
     <tr>
         <apex:repeat value="{!columnName}" var="colName">
