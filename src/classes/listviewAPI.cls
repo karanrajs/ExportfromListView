@@ -38,10 +38,11 @@ public List<String> columnName {get;set;}
 public List<sObject> recordList {get;set;}
 public List<List<sObject>> allRecords {get;set;}
 public List<listviewAPI.Columns> parserCol{get;set;}
+public String fileName {get;set;}
 public List<Columns> columns;
 
   public void fetchListviewRecords() {  
-  	 
+     
     columnName = new List<String>();
     fields = new List<String>();
     parserCol =  new List<listviewAPI.Columns>();
@@ -49,6 +50,8 @@ public List<Columns> columns;
     allRecords = new List<List<sObject>>();
     String listid = apexpages.currentpage().getparameters().get('listid');
     String ObjectName = apexpages.currentpage().getparameters().get('Object');
+    String listName = apexpages.currentpage().getparameters().get('listName');
+    fileName =  ObjectName +'_'+listName +'_'+ Datetime.now().format();
     
     //Http callout 
     HttpRequest req = new HttpRequest();
@@ -63,9 +66,8 @@ public List<Columns> columns;
     Http h = new Http();
     HttpResponse res = h.send(req);
     Map<String,Object> root  = (Map<String, Object>)JSON.deserializeUntyped(res.getBody());     
-    
     //Nested list logic to overcome collection limit
-    for(Sobject sobj : Database.query((string)root.get('query') + ' Limit 100' )){
+    for(Sobject sobj : Database.query((string)root.get('query'))){
         recordList.add(sobj);
         if(recordList.size() == 10000){
             allRecords.add(recordList);
