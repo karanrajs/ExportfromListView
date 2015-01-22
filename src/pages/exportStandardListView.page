@@ -1,4 +1,4 @@
-<apex:page controller="listviewAPI" readOnly="true" action="{!fetchListviewRecords}" contentType="application/x-excel#{!fileName}.xls" language="en-US">
+<apex:page controller="listviewAPI" readOnly="true" action="{!fetchListviewRecords}" language="en-US" contentType="application/vnd.ms-excel#{!fileName}.xls">
 <table border="1">
     <tr>
         <apex:repeat value="{!columnName}" var="colName">
@@ -9,7 +9,7 @@
     <apex:repeat value="{!records}" var="rec"> 
     <tr>
         <apex:repeat value="{!fields}" var="fieldName">
-            <td><apex:outputText value=" {!rec[fieldName]}"/> </td>
+           <td><apex:outputText value=" {!rec[fieldName]}"/> </td>      
         </apex:repeat>
     </tr>
     </apex:repeat>
