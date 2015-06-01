@@ -6,7 +6,7 @@ ExportfromListView
        src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/src/main/webapp/resources/img/deploy.png">
 </a>
 
-This allows you to Export records directly from List view of any objects.<br/> 
+This simple project allows you to Export records into excel sheet directly from Standard List view of any objects.<br/> 
 Find more details about in my blog click <a href="http://clicksandcode.blogspot.in/2014/10/export-records-from-list-viewlistview.html">here</a> 
 
 <h3>Screenshot</h3>
@@ -28,8 +28,8 @@ To add the Export to excel button follow the below setps, below example for 'Acc
 var listview = document.getElementsByName('fcf')[0]; 
 var listName = listview.options[listview.selectedIndex].text; 
 //Getting List Id 
-var listId = document.getElementsByName("fcf")[0].value; 
-var ObjectName = 'Account'; 
+var listId = document.querySelectorAll('[name$="fcf"]')[0]; 
+var ObjectName = 'Account'; //Action : Enter the Object API Name
 //Passing ListId,ObjectName and ListName to Visualforce page 
 window.open("apex/exportStandardListView?Object="+ObjectName+"&listid="+listId+"&listName="+listName,"myWindow");
 ```
