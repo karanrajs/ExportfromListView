@@ -6,8 +6,7 @@ ExportfromListView
        src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/src/main/webapp/resources/img/deploy.png">
 </a>
 
-This simple project allows you to Export records into excel sheet directly from Standard List view of any objects.<br/> 
-Find more details about in my blog click <a href="http://clicksandcode.blogspot.in/2014/10/export-records-from-list-viewlistview.html">here</a> 
+This simple project allows you to Export records into excel sheet directly from Standard List view of any objects.Find more details in my blog check <a href="http://clicksandcode.blogspot.in/2014/10/export-records-from-list-view-listview.html" target="_blank">here</a> 
 
 <h3>Screenshot</h3>
 ![img](/images/ExportToExcel.png)
