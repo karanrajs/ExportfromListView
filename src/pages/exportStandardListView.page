@@ -9,10 +9,11 @@
     <apex:repeat value="{!records}" var="rec"> 
     <tr>
         <apex:repeat value="{!fields}" var="fieldName">
-           <td><apex:outputText value=" {!rec[fieldName]}"/> </td>      
+           <td> <apex:outputText value=" {!rec[fieldName]}"> </apex:outputText> </td>      
         </apex:repeat>
     </tr>
     </apex:repeat>
     </apex:repeat>
 </table>
+
 </apex:page>

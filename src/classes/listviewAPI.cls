@@ -45,18 +45,18 @@ public List<Columns> columns;
     parserCol =  new List<listviewAPI.Columns>();
     recordList = new List<sObject>();
     allRecords = new List<List<sObject>>();
+    try{
     String listid = apexpages.currentpage().getparameters().get('listid');
     String ObjectName = apexpages.currentpage().getparameters().get('Object');
     String listName = apexpages.currentpage().getparameters().get('listName');
     fileName =  ObjectName +'_'+listName.replace(' ','_') +'_'+ Datetime.now().format();
-    
     //Http callout 
     HttpRequest req = new HttpRequest();
     req.setHeader('Authorization', 'Bearer ' + UserInfo.getSessionID());
     req.setHeader('Content-Type', 'application/json');
     String domainUrl=URL.getSalesforceBaseUrl().toExternalForm();
     system.debug('********domainUrl:'+domainUrl);
-    String endpointUrl=domainUrl+'/services/data/v32.0/sobjects/'+ObjectName+'/listviews/'+listid+'/describe';
+    String endpointUrl = domainUrl+'/services/data/v32.0/sobjects/' +(ObjectName=='Person_Account'?'Account':ObjectName)+'/listviews/'+listid+'/describe';
     system.debug('domain URL' + endpointUrl);
     req.setEndpoint(endpointUrl);
     req.setMethod('GET');      
@@ -95,6 +95,10 @@ public List<Columns> columns;
             columnName.add(lc.label);    
         }
      }
+    }catch(Exception ex){
+       Apexpages.addMessage(new ApexPages.Message(ApexPages.Severity.INFO,''+'There is some problem occurred, verify object name in the custom button code"'));
+    }
+
   }   
   
   public class Columns {

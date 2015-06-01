@@ -2,6 +2,8 @@
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
         <members>listviewAPI</members>
+        <members>listviewApiTest</members>
+        <members>mockHttpResponseGenerator</members>
         <name>ApexClass</name>
     </types>
     <types>
@@ -9,7 +11,11 @@
         <name>ApexPage</name>
     </types>
     <types>
-        <members>Account.Export_To_Excel</members>
+        <members>ListViewAPI</members>
+        <name>RemoteSiteSetting</name>
+    </types>
+    <types>
+        <members>Account.Export_to_Excel</members>
         <name>WebLink</name>
     </types>
     <version>31.0</version>
