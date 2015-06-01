@@ -1,5 +1,5 @@
-ExportfromListView
-==================
+Export From ListView
+====================
 
 <a href="https://githubsfdeploy.herokuapp.com?owner=Karanraj&repo=ExportfromListView">
   <img alt="Deploy to Salesforce"
