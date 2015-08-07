@@ -13,7 +13,7 @@
 var listview = document.querySelectorAll(&apos;[name$=&quot;fcf&quot;]&apos;)[0];
 var listName = listview.options[listview.selectedIndex].text;
 //Getting List Id
-var listId = document.getElementsByName(&quot;fcf&quot;)[0].value;
+var listId = document.getElementsByName("fcf")[0].value;
 var ObjectName = &apos;Account&apos;;
 //Passing ListId,ObjectName and ListName to Visualforce page
 window.open(&quot;apex/exportStandardListView?Object=&quot;+ObjectName+&quot;&amp;listid=&quot;+listId+&quot;&amp;listName=&quot;+listName,&quot;myWindow&quot;);</url>
